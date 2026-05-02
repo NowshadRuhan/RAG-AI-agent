@@ -2,6 +2,10 @@
 
 A fully automated RAG AI agent that ingests new Google Drive files, generates embeddings, stores them in Pinecone, and uses an AI Agent with memory and retrieval to answer chat queries using OpenAI models for accurate, context‑aware responses.
 
+## Rag AI Agent. 
+![aiagent](https://github.com/NowshadRuhan/RAG-AI-agent/blob/main/rag-ai-agent-full-workflow.png?raw=true) 
+
+
 This workflow automates a complete RAG-powered AI agent pipeline. When a new file is added to Google Drive, it is automatically downloaded, split into chunks, embedded, and stored in Pinecone as a vector database. On the chat side, incoming user messages trigger an AI Agent that retrieves relevant context from Pinecone, combines it with OpenAI’s chat model and memory, and generates accurate, context‑aware responses. The system seamlessly connects document ingestion, vector storage, retrieval, and conversational reasoning into one unified intelligent assistant.
 
 ## Explain in below: step by step
@@ -21,6 +25,11 @@ This workflow automates a complete RAG-powered AI agent pipeline. When a new fil
 5. Store vectors in Pinecone; Action:
    - Each embedding, along with its original text and metadata (e.g., file name, chunk index), is stored in a Pinecone index.
    - Pinecone becomes your vector database, optimized for fast similarity search over all chunks.
+     
+#### Explain in above. (Rag data processing)
+![aiagent](https://github.com/NowshadRuhan/RAG-AI-agent/blob/main/rag-data-processing.png?raw=true) 
+
+  
 6. Wait for a chat message; Trigger:
    - On the “chat side,” a user sends a message (e.g., via a chat UI, API, or messaging app).
    - This incoming message triggers the AI Agent workflow
@@ -45,3 +54,5 @@ This workflow automates a complete RAG-powered AI agent pipeline. When a new fil
    - The generated answer is returned to the chat channel (web app, messaging app, etc.).
    - From the user’s perspective, they just asked a question and got a smart, document‑aware reply.
 
+#### Explain in above.(Rag ai-agent) 
+![aiagent](https://github.com/NowshadRuhan/RAG-AI-agent/blob/main/rag-ai-agent.png?raw=true) 
